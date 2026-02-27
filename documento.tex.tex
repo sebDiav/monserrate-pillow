@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+
+\title{Uso de la Biblioteca Pillow en Python \\
+Aplicación Cultural: Procesamiento de Imagen de Monserrate}
+\author{Sebastián Díaz}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage
+
+\section{Introducción}
+
+La programación permite desarrollar herramientas que pueden aplicarse en múltiples contextos, incluyendo la preservación y promoción de la cultura. En este proyecto se utiliza la biblioteca Pillow en Python para realizar procesamiento básico de imágenes, tomando como ejemplo una imagen del Cerro de Monserrate, uno de los lugares más representativos de Bogotá, Colombia.
+
+\section{¿Qué es Pillow?}
+
+Pillow es una biblioteca de Python utilizada para abrir, manipular y guardar imágenes en diferentes formatos como JPG, PNG, BMP, entre otros. Es una versión mejorada y mantenida de la antigua biblioteca PIL (Python Imaging Library).
+
+\section{Historia}
+
+Pillow fue creada como un proyecto de continuación de PIL, la cual dejó de mantenerse. Desde entonces, Pillow se ha convertido en la biblioteca estándar para el procesamiento de imágenes en Python, siendo ampliamente utilizada en desarrollo web, inteligencia artificial y aplicaciones educativas.
+
+\section{Importancia}
+
+El procesamiento de imágenes es fundamental en áreas como:
+
+\begin{itemize}
+\item Diseño gráfico
+\item Desarrollo web
+\item Visión por computadora
+\item Inteligencia artificial
+\item Preservación digital del patrimonio cultural
+\end{itemize}
+
+En este proyecto se demuestra cómo la tecnología puede utilizarse para resaltar elementos culturales colombianos como Monserrate.
+
+\section{Instalación}
+
+Para instalar Pillow se utiliza el siguiente comando en la terminal:
+
+\begin{verbatim}
+pip install pillow
+\end{verbatim}
+
+\section{Funciones principales utilizadas}
+
+En el desarrollo del proyecto se utilizaron las siguientes funciones:
+
+\begin{itemize}
+\item Image.open() -- Abre una imagen
+\item image.size -- Obtiene el tamaño
+\item image.format -- Muestra el formato
+\item image.mode -- Muestra el modo de color
+\item image.save() -- Guarda la imagen modificada
+\end{itemize}
+
+\section{Ejemplo práctico}
+
+A continuación se muestra el código utilizado en el proyecto:
+
+\begin{verbatim}
+from PIL import Image
+
+imagen = Image.open("monserrate.jpg")
+
+print("Tamaño:", imagen.size)
+print("Formato:", imagen.format)
+print("Modo:", imagen.mode)
+
+imagen_gris = imagen.convert("L")
+imagen_gris.save("monserrate_modificada.jpg")
+
+print("Proceso finalizado correctamente.")
+\end{verbatim}
+
+\section{Aplicación cultural}
+
+Monserrate es uno de los símbolos más importantes de Bogotá y un lugar de gran valor histórico, religioso y turístico en Colombia. A través del procesamiento digital de imágenes, se pueden crear archivos optimizados, versiones en distintos formatos o estilos artísticos que ayuden a promover y preservar el patrimonio cultural colombiano.
+
+Este proyecto demuestra cómo herramientas tecnológicas pueden integrarse con elementos culturales para generar aplicaciones educativas y sociales.
+
+\section{Conclusión}
+
+La biblioteca Pillow es una herramienta poderosa y accesible para el procesamiento de imágenes en Python. En este trabajo se aplicó su uso en un contexto cultural colombiano, demostrando que la programación puede contribuir a la preservación y difusión del patrimonio cultural.
+
+\section{Repositorio}
+
+El código completo del proyecto se encuentra disponible en el siguiente enlace:
+
+\href{https://github.com/sebDiav/monserrate-pillow}{Repositorio en GitHub}
+
+\end{document}
